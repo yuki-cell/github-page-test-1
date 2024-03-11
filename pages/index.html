@@ -5,19 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Page Title</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
 </head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+
+        padding: 10px;
+    }
+</style>
 <body>
-    <!-- Load and display header.html -->
-    <div id="header"></div>
     
-    <!-- Load and display footer.html -->
-    <div id="footer"></div>
+    <div id="header-box"></div>
+    
+    のカナダでのシェアハウス生活で、限界まで物を減らす想定で考えてみました。
+
+    ミニマリストよりもバックパッカーに近い持ち物リストです。
+
+    ちなみに消耗品など現地調達できる。
+    
+    <div id="footer-box"></div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(function(){
-            $("#header").load("../components/header.html");
-            $("#footer").load("../components/footer.html");
+            $("#header-box").load("../components/header.html");
+            $("#footer-box").load("../components/footer.html");
         });
     </script>
 

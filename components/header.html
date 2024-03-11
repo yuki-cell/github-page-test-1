@@ -1,13 +1,28 @@
 <style>
     #header {
-        background: blue;
-        p {
-            color: red;
+        border-bottom: solid 1px black;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .right {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
         }
     }
 </style>
 <div id="header">
-    header
-    <p>header subtext</p>
+    <div class="left">
+        <p>HOME</p>
+    </div>
+    <div class="right">
+        <p>blog</p>
+        <p>project</p>
+        <p>about</p>
+    </div>
 </div>
 
