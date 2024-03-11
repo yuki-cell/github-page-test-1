@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+</head>
+<body>
+    <!-- Load and display header.html -->
+    <div id="header"></div>
+    
+    <!-- Load and display footer.html -->
+    <div id="footer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#header").load("../components/header.html");
+            $("#footer").load("../components/footer.html");
+        });
+    </script>
+
+<div id="data"></div>
+
+<script>
+    fetch('../data.json')
+        .then(response => response.json())
+        .then(data => {
+            const dataContainer = document.getElementById('data');
+            dataContainer.innerHTML = JSON.stringify(data, null, 2);
+        })
+        .catch(error => console.error('Error fetching data:', error));
+</script>
+</body>
+</html>
