@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Page Title</title>
 
+    <link rel="stylesheet" href="../global.css">
+
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,18 +19,26 @@
         padding: 0;
     }
     body {
-        font-family: "Zen Kaku Gothic New", sans-serif;
+        /* font-family: "Zen Kaku Gothic New", sans-serif; */
         /* font-family: "Hiragino Kaku Gothic ProN"; */
+        /* font-family: Arial, Helvetica, sans-serif; */
+        font-family: Helvetica;
         font-weight: 400;
         font-style: normal;
-        font-size: 14px;
+        letter-spacing: 1px;
+        /* font-size: 16px; */
 
         padding: 10px;
+        background-color: rgb(245, 245, 245);
     }
 </style>
 <body>
     
     <div id="header-box"></div>
+
+    <div id="projects-list-box"></div>
+
+    <div id="blog-list-box"></div>
     
     のカナダでのシェアハウス生活で、限界まで物を減らす想定で考えてみました。
 
@@ -43,6 +53,9 @@
         $(function(){
             $("#header-box").load("../components/header.html");
             $("#footer-box").load("../components/footer.html");
+
+            $("#projects-list-box").load("../components/project_list.html");
+            $("#blog-list-box").load("../components/blog_list.html");
         });
     </script>
 

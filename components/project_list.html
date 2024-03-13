@@ -1,0 +1,31 @@
+<style>
+    #project_list {
+        /* p#title {
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+        } */
+
+        .card_list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            
+        }
+    }
+</style>
+<div id="project_list">
+    <p id="title">
+        プロジェクト
+    </p>
+
+    
+    <div class="card_list_box">
+    </div>
+</div>
+
+<script>
+    $("#project_list .card_list_box").load("../components/card_list.html");
+</script>

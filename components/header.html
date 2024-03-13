@@ -1,28 +1,84 @@
 <style>
     #header {
-        border-bottom: solid 1px black;
-        padding-bottom: 5px;
-        margin-bottom: 10px;
         width: 100%;
         box-sizing: border-box;
         display: flex;
         flex-direction: row;
+        /* gap: 50px; */
+        align-items: center;
+        /* border-bottom: 1px solid black; */
         justify-content: space-between;
+        background-color: white;
+        border-radius: 20px;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+        margin-bottom: 30px;
+        
+
+
+        button {
+            background: none;
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+
         .right {
             display: flex;
             flex-direction: row;
             gap: 20px;
+            button {
+                font-size: 16px;
+                position: relative;
+                transition: color 0.3s ease;
+            }
+            button:hover {
+                cursor: pointer;
+                color: grey;
+                /* border-bottom: 1px solid black; */
+            }
+            button::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                width: 0;
+                height: 1px;
+                background-color: black; /* Change color as needed */
+                transition: width 0.3s ease; /* Transition for width */
+            }
+            button:hover::after {
+                width: 100%;
+            }
         }
+        .left {
+            button {
+                font-size: 25px;
+                font-weight: bold;
+                position: relative;
+                transition: color 0.3s ease;
+            }
+            button:hover {
+                cursor: pointer;
+                color: grey;
+            }
+            
+        }
+
     }
 </style>
 <div id="header">
     <div class="left">
-        <p>HOME</p>
+        <button>ホーム</button>
     </div>
     <div class="right">
-        <p>blog</p>
-        <p>project</p>
-        <p>about</p>
-    </div>
+        <button>ブログ</button>
+        <button>プロジェクト</button>
+        <button>サイトについて</button>
+    </div>    
 </div>
 

@@ -1,0 +1,8 @@
+#project_list, #blog_list {
+    p#title {
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}
