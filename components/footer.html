@@ -1,7 +1,9 @@
 <style>
     #footer {
-        position: absolute;
-        bottom: 10px;
+        /* position: absolute;
+        bottom: 10px; */
+        margin-top: 20px;
+        margin-bottom: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -13,9 +15,25 @@
     }
 </style>
 <div id="footer">
-    フッター
     <p>
-        フッター サブテキスト
+        <span id="current_year"></span>
+        &copy; フッター
     </p>
+    
+    <script>
+        current_year = new Date().getFullYear()
+        $("#current_year").text(current_year)
+    </script>
 </div>
+
+<script>
+        // let bodyHeight = document.body.clientHeight;
+        // let windowHeight = window.innerHeight;
+        // if (bodyHeight < windowHeight) {
+        //     $("#footer").css({
+        //         "position": "absolute",
+        //         "bottom": "0"
+        //     })
+        // } 
+</script>
 

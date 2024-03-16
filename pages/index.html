@@ -28,7 +28,8 @@
         letter-spacing: 1px;
         /* font-size: 16px; */
 
-        padding: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
         background-color: rgb(245, 245, 245);
     }
 </style>
@@ -39,12 +40,17 @@
     <div id="projects-list-box"></div>
 
     <div id="blog-list-box"></div>
-    
-    のカナダでのシェアハウス生活で、限界まで物を減らす想定で考えてみました。
 
-    ミニマリストよりもバックパッカーに近い持ち物リストです。
-
-    ちなみに消耗品など現地調達できる。
+    <div id="data"></div>
+    <script>
+        fetch('../data.json')
+            .then(response => response.json())
+            .then(data => {
+                const dataContainer = document.getElementById('data');
+                dataContainer.innerHTML = JSON.stringify(data, null, 2);
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
     
     <div id="footer-box"></div>
 
@@ -58,17 +64,5 @@
             $("#blog-list-box").load("../components/blog_list.html");
         });
     </script>
-
-<div id="data"></div>
-
-<script>
-    fetch('../data.json')
-        .then(response => response.json())
-        .then(data => {
-            const dataContainer = document.getElementById('data');
-            dataContainer.innerHTML = JSON.stringify(data, null, 2);
-        })
-        .catch(error => console.error('Error fetching data:', error));
-</script>
 </body>
 </html>

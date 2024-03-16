@@ -1,20 +1,4 @@
 <style>
-    #project_list {
-        /* p#title {
-            font-weight: bold;
-            font-size: 18px;
-            text-align: center;
-        } */
-
-        .card_list {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            
-        }
-    }
 </style>
 <div id="project_list">
     <p id="title">
@@ -28,7 +12,7 @@
 
 <script>
     $("#project_list .card_list_box").load("../components/card_list.html", function() {
-        cardList = $("#project_list .card_list")[0]
+        let cardList = $("#project_list .card_list")[0]
         $.get("../components/card.html", function(data) {
             for (let i = 0; i < 3; i++) {
                 const newDiv = document.createElement('div');
