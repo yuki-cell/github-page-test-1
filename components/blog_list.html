@@ -14,15 +14,16 @@
 </div>
 
 <script>
-    // $("#blog_list .card_list_box").load("../components/card_list.html");
+    $("#blog_list .card_list_box").load("../components/card_list.html", function() {
+        let cardList = $("#blog_list .card_list")[0]
+        $.get("../components/card.html", function(data) {
+            for (let i = 0; i < 5; i++) {
+                const newDiv = document.createElement('div');
+                newDiv.innerHTML = data
+                cardList.appendChild(newDiv);
+            }
+        });
 
-
-    cardList = $('#blog_list .card_list_box');
-    $.get("../components/card.html", function(data) {
-        for (let i = 0; i < 5; i++) {
-            const newDiv = document.createElement('div');
-            newDiv.innerHTML = data
-            cardList.appendChild(newDiv);
-        }
-    });
+    })
+    
 </script>

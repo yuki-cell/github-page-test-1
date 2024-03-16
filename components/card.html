@@ -1,24 +1,25 @@
 <style>
     .card {
-                width: 200px;
-                height: 200px;
-                /* border: 1px solid black; */
-                /* border-radius: 10px; */
-                padding: 20px;
-                background-color: white;
-            }
-            .card:hover {
-                cursor: pointer;
-                /* box-shadow
-                horizontal offset = 15px to right
-                vertical offset = 15px to down
-                blur radius = 0px, strength of blur 
-                spread radius = 0px, length of shadow spread
+        width: 200px;
+        height: 200px;
+        /* border: 1px solid black; */
+        /* border-radius: 10px; */
+        padding: 20px;
+        background-color: white;
+        transition: box-shadow ease 0.3s;
+    }
+    .card:hover {
+        cursor: pointer;
+        /* box-shadow
+        horizontal offset = 15px to right
+        vertical offset = 15px to down
+        blur radius = 0px, strength of blur 
+        spread radius = 0px, length of shadow spread
 
-                多分やけどblur radiusとspread radiusは相互関係にある
-                */
-                box-shadow: 15px 15px 0px 0px lightblue;
-            }
+        多分やけどblur radiusとspread radiusは相互関係にある
+        */
+        box-shadow: 15px 15px 0px 0px lightblue;
+    }
 </style>
 <div class="card">
     hello, world
